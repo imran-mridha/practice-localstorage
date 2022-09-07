@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" />
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tw-elements/dist/css/index.min.css" />
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+  tailwind.config = {
+    theme: {
+      extend: {
+        fontFamily: {
+          sans: ['Inter', 'sans-serif'],
+        },
+      }
+    }
+  }
+</script>
+</head>
+<body>
+  
+  <header>
+    <h1 class="text-2xl text-center my-10">Practice Task for local storage (Level-04)</h1>
+  </header>
+
+  <main>
+    <section>
+      <div class="bg-red-200 w-6/12 mx-auto p-5">
+        <h2 class="text-center text-3xl border-b border-red-500 py-3">Please Contact Me</h2>
+        <div class="p-5">
+          <div class="flex justify-between">
+            <div class="flex justify-between">
+              <label for="">Name:</label>
+              <input id="name" class="w-9/12 px-5 rounded" type="text" placeholder="Enter Your Name">
+            </div>
+            <div>
+              <button onclick="sendName()" class="bg-red-500 py-1.5 px-3 text-white rounded">Send Name</button>
+              <button onclick="removeName()" class="bg-red-500 py-1.5 px-3 text-white rounded">Delete Name</button>
+            </div>
+          </div>
+          <div class="flex justify-between my-5">
+            <div class="flex justify-between">
+              <label for="">Email:</label>
+              <input id="email" class="w-9/12 px-5 rounded" type="email" placeholder="Enter Your Email">
+            </div>
+            <div>
+              <button onclick="sendEmail()" class="bg-red-500 py-1.5 px-3 text-white rounded">Send Email</button>
+              <button onclick="removeEmail()" class="bg-red-500 py-1.5 px-3 text-white rounded">Delete Email</button>
+            </div>
+          </div>
+          <div class="flex justify-between my-5">
+            <div class="flex justify-between">
+              <label for="">Message:</label>
+              <textarea id="message" class="w-9/12 px-5 ml-3 rounded" name="" id="" cols="15" rows="2"></textarea>
+            </div>
+            <div>
+              <button onclick="sendMsg()" class="bg-red-500 py-1.5 px-3 text-white rounded">Send Message</button>
+              <button onclick="removeMsg()" class="bg-red-500 py-1.5 px-3 text-white rounded">Delete Message</button>
+            </div>
+          </div>
+          <div class="text-center pt-5">
+            <button onclick="getInputValues()" class="bg-red-500 py-1.5 px-3 text-white rounded mr-5">Send</button>
+            <button onclick="resetLs()" class="bg-red-500 py-1.5 px-3 text-white rounded ml-5">Reset</button>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Display Persone Info -->
+    <section class="my-10">
+      <ul id="display-person" class="bg-red-300 w-6/12 mx-auto p-5">
+
+      </ul>
+    </section>
+  </main>
+
+
+  <script src="https://cdn.jsdelivr.net/npm/tw-elements/dist/js/index.min.js"></script>
+  <script src="js/index.js"></script>
+</body>
+</html>
